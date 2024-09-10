@@ -1,0 +1,16 @@
+view "UA" {
+     match-clients { 172.20.0.0/29; 172.20.0.9; };
+     zone "cdn.test" {
+         type master;
+         file "/etc/bind/db.cdn.test-ua";
+     };
+};
+
+view "default" {
+     match-clients { 172.20.0.10; };
+     zone "cdn.test" {
+         type master;
+         file "/etc/bind/db.cdn.test";
+     };
+};
+

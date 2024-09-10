@@ -1,0 +1,15 @@
+$TTL    604800
+@       IN      SOA     ns.cdn.test. root.cdn.test. (
+                        2         ; Serial
+                        604800     ; Refresh
+                        86400      ; Retry
+                        2419200    ; Expire
+                        604800 )   ; Negative Cache TTL
+;
+@       IN      NS      ns.cdn.test.
+ns      IN      A       172.20.0.2  ; IP of the bind server
+lb      IN      A       172.20.0.3  ; IP of load balancer
+nginx1  IN      A       172.20.0.5
+nginx2  IN      A       172.20.0.6
+nginx3  IN      A       172.20.0.7
+nginx4  IN      A       172.20.0.8
